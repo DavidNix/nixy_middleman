@@ -1,0 +1,39 @@
+!!! 5
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{'http-equiv' => "X-UA-Compatible", :content =>"IE=edge"}
+
+    %title= page_title(current_page)
+
+    %meta{:name => "description", :content => page_meta_description(current_page)}
+    %meta{:name => "author", :content => page_author(current_page)}
+    -# You may wish to remove the 'initial scale=1.0' for non-responsive layouts
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+
+    /[if lte IE 8]
+      %script{src: "http://html5shim.googlecode.com/svn/trunk/html5.js"}
+
+    = stylesheet_link_tag "styles"
+
+  %body{:class => current_page.data.bodyclass}
+    .container
+      %header
+        %h1= current_page.data.title
+      #main-content{:role => "main"}
+
+        = yield
+
+      %footer
+        %p &copy; #{copyright_years(2014)} Some Guy
+
+    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+    = javascript_include_tag "all"
+
+    :javascript
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create',#{ENV['GOOGLE_ANALYTICS']});ga('send','pageview');

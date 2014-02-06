@@ -1,0 +1,1 @@
+# if using Ruby 2, place refinement (instead of monkey patches) here
