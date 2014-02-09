@@ -54,6 +54,9 @@ activate :livereload
 #   @which_fake_page = "Rendering a fake page with a variable"
 # end
 
+# Pretty URLs
+activate :directory_indexes
+
 ###
 # Helpers
 ###
