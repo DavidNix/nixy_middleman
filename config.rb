@@ -10,6 +10,8 @@ Dotenv.load
 # Lib
 require_all "lib"
 
+activate :livereload
+
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact
@@ -82,7 +84,7 @@ configure :build do
   #   :favicon_maker_base_image => "favicon_base.svg"
 
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
   activate :minify_javascript
