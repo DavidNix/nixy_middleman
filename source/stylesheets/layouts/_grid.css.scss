@@ -1,0 +1,33 @@
+.container {
+  // Force images to scale down to their container widths.
+
+  @include outer-container;
+
+  .feature-one {
+    @include span-columns(4);
+  }
+
+  .feature-two {
+    @include span-columns(4);
+  }
+
+  .feature-three {
+    @include span-columns(4);
+    @include omega;
+  }
+
+  .moreinfo {
+    @include span-columns(12);
+    @include omega;
+  }
+
+  footer {
+    @include span-columns(12);
+    text-align: right;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

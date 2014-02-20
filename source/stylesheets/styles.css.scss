@@ -9,42 +9,37 @@
 @include h5bp-normalize;
 @include h5bp-base-styles;
 
-// Susy Grid Systems - choose one to customize
-@import "susy_example";
+@import "bourbon";
+// my grid settings go here
+@import "neat";
+
+// Grid
+@import "layouts/grid";
 
 // Font Awesome icons
 @import "font-awesome";
 
-// Your own styles go here.
-h1 {
-   color: #999;
-  text-transform: uppercase;
-  line-height: 1em;
-}
+// // Your own styles go here.
+// h1 {
+//    color: #999;
+//   text-transform: uppercase;
+//   line-height: 1em;
+// }
 
-h2 {
-  line-height: 1.3em;
-}
+// h2 {
+//   line-height: 1.3em;
+// }
 
-kbd {
-  background-color: #f5f5f5;
-  border: 1px solid #dedede;
-  padding: 0px 3px 2px;
-}
+// kbd {
+//   background-color: #f5f5f5;
+//   border: 1px solid #dedede;
+//   padding: 0px 3px 2px;
+// }
 
-footer {
-  margin-top: 3em;
-  text-align: right;
-}
-
-.container {
-  // Force images to scale down to their container widths.
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
+// footer {
+//   margin-top: 3em;
+//   text-align: right;
+// }
 
 // H5BP helper classes & mixins.
 // @include h5bp-helpers

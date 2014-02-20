@@ -3,7 +3,6 @@
 ###
 
 # Gems
-require "susy"
 require "dotenv"
 Dotenv.load
 
