@@ -2,27 +2,77 @@
   // Force images to scale down to their container widths.
 
   @include outer-container;
+  @include pad(default);
 
   .feature-one {
+    // @include pad(default);
+
     @include span-columns(4);
+
+    @include media($tablet) {
+      @include span-columns(4);
+    }
+
+    @include media($mobile) {
+      @include span-columns(6);
+      @include omega;
+    }
   }
 
   .feature-two {
     @include span-columns(4);
+
+    @include media($tablet) {
+      @include span-columns(4);
+      @include omega;
+    }
+
+    @include media($mobile) {
+      @include span-columns(6);
+      @include omega;
+    }
   }
 
   .feature-three {
     @include span-columns(4);
+
+    @include media($tablet) {
+      @include span-columns(4);
+    }
+
+    @include media($mobile) {
+      @include span-columns(6);
+      @include omega;
+    }
+
     @include omega;
   }
 
   .moreinfo {
     @include span-columns(12);
+
+    @include media($tablet) {
+      @include span-columns(4);
+      @include omega;
+    }
+
+    @include media($mobile) {
+      @include span-columns(6);
+    }
+
     @include omega;
   }
 
   footer {
     @include span-columns(12);
+
+    @include media($tablet) {
+      @include span-columns(8);
+    }
+
+    @include media($mobile) {
+      @include span-columns(6);
+    }
     text-align: right;
   }
 

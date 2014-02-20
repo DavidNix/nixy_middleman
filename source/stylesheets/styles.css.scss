@@ -10,7 +10,7 @@
 @include h5bp-base-styles;
 
 @import "bourbon";
-// my grid settings go here
+@import "layouts/grid_settings";
 @import "neat";
 
 // Grid
