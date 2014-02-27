@@ -2,16 +2,17 @@
 
 ## What is it?
 
-A middleman template that is very similar to [Amicus](https://github.com/nathos/amicus). 
+A middleman template that is somewhat similar to [Amicus](https://github.com/nathos/amicus). 
 
 The differences:
 
 * Prefer SCSS to SASS
+* Prefer Bourbon and Neat to Susy
 * [Dotenv](https://github.com/bkeepers/dotenv) for simple environment variable management
 * SMACCS asset directory structure
 * No holder.js
 * Minitest setup - run with `rake test`
-* Took out modernizr
+* No modernizr
 
 For full Middleman documentation, visit the [Middleman website](http://middlemanapp.com/).
 
